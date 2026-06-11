@@ -1,0 +1,354 @@
+/* archive.css - Category/archive page, article cards, titlebar, pagination */
+
+/* ============================================================
+   HOME H1 (visible, part of page flow but subtle)
+============================================================ */
+.home56__h1 {
+    font-family: var(--font-heading);
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px 0 10px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-color);
+}
+
+/* ============================================================
+   HOME FEATURED GROUP LAYOUT
+============================================================ */
+.home56__featured-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    align-items: start;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .home56__featured-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   ARCHIVE TITLEBAR
+============================================================ */
+.archive56__titlebar {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 30px 0 20px;
+    text-align: center;
+}
+
+.titlebar56 {
+    text-align: center;
+}
+
+.titlebar56__label {
+    display: block;
+    font-family: var(--font-nav);
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.titlebar56__title {
+    font-family: var(--font-heading);
+    font-size: 2.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0;
+    line-height: 1.1;
+}
+
+@media only screen and (max-width: 600px) {
+    .titlebar56__title {
+        font-size: 1.8em;
+    }
+}
+
+/* ============================================================
+   ARCHIVE MAIN AREA
+============================================================ */
+.archive56__main {
+    padding: 30px 0;
+}
+
+.primary56 {
+    width: 100%;
+}
+
+/* ============================================================
+   ARTICLE GRID CARDS (category listing)
+============================================================ */
+.post56--grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.post56--grid .thumbnail56 {
+    margin-bottom: 10px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.post56--grid .thumbnail56 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.post56--grid .thumbnail56:hover img {
+    transform: scale(1.04);
+}
+
+.post56--grid .title56 {
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 6px;
+}
+
+.post56--grid .excerpt56 {
+    font-size: 0.85em;
+    line-height: 1.5;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    /* Clamp to 3 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.post56--grid .meta56 {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* The separator line at card bottom */
+.post56__sep__line {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 14px;
+}
+
+/* ============================================================
+   ARTICLE LIST PARTIAL (AJAX partial)
+============================================================ */
+.article-list56 {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media only screen and (max-width: 1024px) {
+    .article-list56 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .article-list56 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .article-list56 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   PAGINATION
+============================================================ */
+.pagination56-wrapper {
+    padding: 20px 0 10px;
+    text-align: center;
+}
+
+/* ============================================================
+   HOME PAGE SPECIFIC
+============================================================ */
+
+/* Featured group row at top of home */
+.home56__featured {
+    padding: 30px 0 0;
+}
+
+.home56__featured .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+@media only screen and (max-width: 768px) {
+    .home56__featured .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Big featured card */
+.post56--featured .thumbnail56 {
+    margin-bottom: 14px;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+}
+
+.post56--featured .thumbnail56 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.post56--featured .thumbnail56:hover img {
+    transform: scale(1.03);
+}
+
+.post56--featured .title56 {
+    font-size: 1.6em;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.post56--featured .excerpt56 {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Side list of articles */
+.home56__side-list .post56 {
+    display: flex;
+    gap: 12px;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.home56__side-list .post56:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.home56__side-list .thumbnail56 {
+    flex-shrink: 0;
+    width: 90px;
+    height: 70px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.home56__side-list .thumbnail56 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home56__side-list .post56__text {
+    flex: 1;
+    padding: 0;
+}
+
+.home56__side-list .title56 {
+    font-size: 0.9em;
+}
+
+.home56__side-list .excerpt56 {
+    display: none;
+}
+
+/* Category section block on home */
+.home56__cat-section {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.home56__cat-section:last-child {
+    border-bottom: none;
+}
+
+.home56__cat-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.home56__cat-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-heading);
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+.home56__cat-title-line {
+    display: block;
+    flex: 1;
+    height: 1px;
+    min-width: 40px;
+    background: var(--border-color);
+}
+
+.home56__cat-viewall {
+    display: block;
+    text-align: right;
+    font-family: var(--font-nav);
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-light);
+    margin-top: 4px;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.home56__cat-viewall:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* Hot topics section */
+.home56__hot-section {
+    padding: 30px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.home56__hot-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.home56__hot-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-heading);
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+}

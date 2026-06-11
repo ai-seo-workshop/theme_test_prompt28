@@ -1,0 +1,205 @@
+/* page.css - Static pages (about/contact/privacy/terms) and 404 */
+
+/* ============================================================
+   STATIC PAGE
+============================================================ */
+.page56__outer {
+    padding: 40px 0;
+}
+
+.page56__header {
+    text-align: center;
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.page56__label {
+    display: block;
+    font-family: var(--font-nav);
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.page56__title {
+    font-family: var(--font-heading);
+    font-size: 2.4em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .page56__title {
+        font-size: 1.6em;
+    }
+}
+
+/* Page content body */
+.page56__content {
+    max-width: var(--narrow-width);
+    margin: 0 auto;
+    font-family: var(--font-body);
+    font-size: 1em;
+    line-height: 1.75;
+    color: var(--text-color);
+}
+
+.page56__content p {
+    margin-bottom: 1.2em;
+}
+
+.page56__content h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 1.6em 0 0.6em;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.page56__content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15em;
+    font-weight: 700;
+    margin: 1.2em 0 0.4em;
+}
+
+.page56__content a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+.page56__content a:hover {
+    color: var(--link-hover-color);
+}
+
+.page56__content ul,
+.page56__content ol {
+    margin-bottom: 1.2em;
+    padding-left: 1.5em;
+}
+
+.page56__content li {
+    margin-bottom: 0.4em;
+}
+
+.page56__breadcrumb {
+    padding: 14px 0 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+/* ============================================================
+   CONTACT PAGE SPECIFIC
+============================================================ */
+.page56__contact-info {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-left: 3px solid var(--accent-color);
+    font-family: var(--font-nav);
+    font-size: 0.9em;
+}
+
+/* ============================================================
+   404 ERROR PAGE
+============================================================ */
+.error404-page {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.error404-page .container {
+    max-width: 600px;
+}
+
+.error404__code {
+    font-family: var(--font-heading);
+    font-size: 8em;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.error404__title {
+    font-family: var(--font-heading);
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.error404__desc {
+    font-family: var(--font-body);
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.error404__action {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.error404__categories {
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 30px;
+}
+
+.error404__categories-title {
+    font-family: var(--font-heading);
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+}
+
+.error404__cat-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.error404__cat-list a {
+    display: inline-block;
+    padding: 6px 16px;
+    border: 1px solid var(--border-color);
+    font-family: var(--font-nav);
+    font-size: 0.85em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.error404__cat-list a:hover {
+    background: var(--accent-color);
+    color: #fff;
+    border-color: var(--accent-color);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .error404__code {
+        font-size: 5em;
+    }
+}

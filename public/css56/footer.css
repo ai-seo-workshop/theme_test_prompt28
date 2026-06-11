@@ -1,0 +1,207 @@
+/* footer.css - Footer sidebar columns and footer bottom bar */
+
+/* ============================================================
+   SITE FOOTER
+============================================================ */
+.site-footer {
+    background: var(--bg);
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+}
+
+/* ============================================================
+   FOOTER SIDEBAR (4-column widget area)
+============================================================ */
+.footer_sidebar56 {
+    border-top: 1px solid var(--border-color);
+}
+
+.footer_sidebar56 .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footer56__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    align-items: start;
+}
+
+@media only screen and (max-width: 1024px) {
+    .footer56__row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .footer56__row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer56__col {
+    min-width: 0;
+}
+
+/* Widget title in footer */
+.footer56__col .widget-title56 {
+    font-family: var(--font-heading);
+    font-size: 0.95em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--text-color);
+}
+
+/* Recent Posts widget */
+.footer-recent-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-recent-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.85em;
+}
+
+.footer-recent-list li:last-child {
+    border-bottom: none;
+}
+
+.footer-recent-list__num {
+    flex-shrink: 0;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--accent-color);
+    font-size: 1.1em;
+    line-height: 1.2;
+}
+
+.footer-recent-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    line-height: 1.4;
+    font-family: var(--font-nav);
+}
+
+.footer-recent-list a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* Tags widget */
+.footer-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.footer-tags a {
+    display: inline-block;
+    padding: 4px 10px;
+    border: 1px solid var(--border-color);
+    font-family: var(--font-nav);
+    font-size: 0.78em;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.footer-tags a:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Footer nav links in the last col */
+.footer-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.footer-nav-list li:last-child {
+    border-bottom: none;
+}
+
+.footer-nav-list a {
+    font-family: var(--font-nav);
+    font-size: 0.85em;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.footer-nav-list a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* ============================================================
+   FOOTER BOTTOM (copyright + nav)
+============================================================ */
+.footer_bottom56 {
+    background: #f5f5f5;
+    border-top: 1px solid var(--border-color);
+    padding: 14px 0;
+}
+
+.footer_bottom56 .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-copyright {
+    font-family: var(--font-nav);
+    font-size: 0.8em;
+    color: var(--text-light);
+}
+
+.footer-menu56 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-menu56 a {
+    font-family: var(--font-nav);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.footer-menu56 a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer_bottom56 .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
