@@ -12,7 +12,7 @@ class Site extends Model
     protected $table = 'sites';
 
     protected $fillable = [
-        'name', 'domain', 'gtag', 'theme', 'default_theme', 'default_language', 'languages'
+        'name', 'domain', 'gtag', 'default_language', 'languages'
     ];
 
     protected $casts = [
@@ -28,22 +28,6 @@ class Site extends Model
         return Cache::remember("site_domain_{$domain}", 3600, function () use ($domain) {
             return static::where('domain', $domain)->first();
         });
-    }
-
-    /**
-     * 获取当前激活的主题，优先使用 theme，其次 default_theme，最后全局 fallback
-     */
-    public function getActiveTheme(): string
-    {
-        return $this->theme ?: ($this->default_theme ?: config('theme.fallback', 'techlysupport'));
-    }
-
-    /**
-     * 获取默认主题（parent theme）
-     */
-    public function getDefaultTheme(): ?string
-    {
-        return $this->default_theme;
     }
 
     /**

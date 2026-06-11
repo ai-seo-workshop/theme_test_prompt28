@@ -49,8 +49,6 @@ class Handler extends ExceptionHandler
     public function render($request, Exception $exception)
     {
         if ($exception instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException) {
-            $theme = app(\App\Services\ThemeManager::class);
-
             // 获取当前语言
             $locale = app()->getLocale();
 
@@ -62,7 +60,7 @@ class Handler extends ExceptionHandler
                 ->where('type', MaterielTask::TYPE_HOME)
                 ->first();
 
-            return response()->view($theme->view('404'), [
+            return response()->view('404', [
                 'categories' => $categories,
                 'slogan'     => $slogan,
             ], 404);

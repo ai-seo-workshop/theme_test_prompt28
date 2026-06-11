@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class IdentifySite
 {
     /**
-     * 根据请求域名识别当前站点，并动态覆盖主题和域名配置。
+     * 根据请求域名识别当前站点，并动态覆盖域名和语言配置。
      * 必须作为全局中间件注册，在所有路由中间件之前执行。
      */
     public function handle(Request $request, Closure $next)
@@ -25,18 +25,13 @@ class IdentifySite
             abort(403, "Domain [{$host}] is not registered.");
         }
 
-        // 1. 将当前站点注入容器，全局可通过 app('current_site') 获取
+        // 将当前站点注入容器，全局可通过 app('current_site') 获取
         app()->instance('current_site', $site);
 
-        // 2. 动态覆盖主题配置（ThemeManager 在 scoped 里读 config，需在其实例化前覆盖）
-        config(['theme.active' => $site->getActiveTheme()]);
-        config(['theme.default' => $site->default_theme]);
-        app()->forgetInstance(\App\Services\ThemeManager::class);
-
-        // 3. 覆盖当前站点域名（SitemapService、alternate_tag 等会用到）
+        // 覆盖当前站点域名（SitemapService、alternate_tag 等会用到）
         config(['app.domain' => $site->domain]);
 
-        // 4. 覆盖语言配置（核心新增）
+        // 覆盖语言配置
         $defaultLanguage   = $site->getDefaultLanguage();
         $allLanguages      = $site->getLanguagesArray();
         $nonDefaultLangs   = array_values(array_diff($allLanguages, [$defaultLanguage]));

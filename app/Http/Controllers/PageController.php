@@ -14,10 +14,10 @@ class PageController extends Controller
     {
         $pageInfo = $this->seoInfo(MaterielTask::TYPE_ABOUT);
         if (!$pageInfo) {
-            return response()->view($this->themeManager->view('404'), ['categories' => $this->categories, 'slogan' => $this->seoInfo(MaterielTask::TYPE_HOME)], 404);
+            return response()->view('404', ['categories' => $this->categories, 'slogan' => $this->seoInfo(MaterielTask::TYPE_HOME)], 404);
         }
 
-        return view($this->themeManager->view('page'), [
+        return view('page', [
             'gtag' => $this->site->gtag,
             'pageInfo' => $pageInfo,
             'categories' => $this->categories,
@@ -33,10 +33,10 @@ class PageController extends Controller
     {
         $pageInfo = $this->seoInfo(MaterielTask::TYPE_CONTACT);
         if (!$pageInfo) {
-            return response()->view($this->themeManager->view('404'), ['categories' => $this->categories, 'slogan' => $this->seoInfo(MaterielTask::TYPE_HOME)], 404);
+            return response()->view('404', ['categories' => $this->categories, 'slogan' => $this->seoInfo(MaterielTask::TYPE_HOME)], 404);
         }
 
-        return view($this->themeManager->view('page'), [
+        return view('page', [
             'gtag' => $this->site->gtag,
             'pageInfo' => $pageInfo,
             'categories' => $this->categories,
@@ -52,10 +52,10 @@ class PageController extends Controller
     {
         $pageInfo = $this->seoInfo(MaterielTask::TYPE_POLICY);
         if (!$pageInfo) {
-            return response()->view($this->themeManager->view('404'), ['categories' => $this->categories, 'slogan' => $this->seoInfo(MaterielTask::TYPE_HOME)], 404);
+            return response()->view('404', ['categories' => $this->categories, 'slogan' => $this->seoInfo(MaterielTask::TYPE_HOME)], 404);
         }
 
-        return view($this->themeManager->view('page'), [
+        return view('page', [
             'gtag' => $this->site->gtag,
             'pageInfo' => $pageInfo,
             'categories' => $this->categories,
@@ -71,10 +71,10 @@ class PageController extends Controller
     {
         $pageInfo = $this->seoInfo(MaterielTask::TYPE_TERMS);
         if (!$pageInfo) {
-            return response()->view($this->themeManager->view('404'), ['categories' => $this->categories, 'slogan' => $this->seoInfo(MaterielTask::TYPE_HOME)], 404);
+            return response()->view('404', ['categories' => $this->categories, 'slogan' => $this->seoInfo(MaterielTask::TYPE_HOME)], 404);
         }
 
-        return view($this->themeManager->view('page'), [
+        return view('page', [
             'gtag' => $this->site->gtag,
             'pageInfo' => $pageInfo,
             'categories' => $this->categories,
@@ -97,6 +97,6 @@ class PageController extends Controller
     }
 
     public function error() {
-        return response()->view($this->themeManager->view('404'), ['categories' => $this->categories, 'slogan' => $this->seoInfo(MaterielTask::TYPE_HOME)], 404);
+        return response()->view('404', ['categories' => $this->categories, 'slogan' => $this->seoInfo(MaterielTask::TYPE_HOME)], 404);
     }
 }

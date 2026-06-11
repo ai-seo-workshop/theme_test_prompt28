@@ -17,12 +17,9 @@ class Controller extends BaseController
     protected $locale;
     protected $alternate_tag;
     protected $site;
-    protected \App\Services\ThemeManager $themeManager;
 
     public function __construct()
     {
-        $this->themeManager = app(\App\Services\ThemeManager::class);
-
         $this->middleware(function ($request, $next) {
             $this->locale     = app()->getLocale();
             $this->categories = CategoryService::getActiveCategories();
@@ -40,7 +37,7 @@ class Controller extends BaseController
      */
     protected function generateAlternateTags(): string
     {
-        $defaultLanguage    = config('app.default_language', config('app.default_language'));
+        $defaultLanguage    = config('app.default_language', 'en');
         $supportedLanguages = config('app.supported_languages', [$defaultLanguage]);
 
         $tags = [];
@@ -57,7 +54,7 @@ class Controller extends BaseController
      */
     protected function getLocalizedHomeUrl(string $lang): string
     {
-        $defaultLanguage = config('app.default_language', config('app.default_language'));
+        $defaultLanguage = config('app.default_language', 'en');
 
         if ($lang === $defaultLanguage) {
             return route('home');
@@ -80,7 +77,7 @@ class Controller extends BaseController
 
     public function crumbs($categoryInfo = null, $blog = null)
     {
-        $defaultLanguage = config('app.default_language', config('app.default_language'));
+        $defaultLanguage = config('app.default_language', 'en');
 
         $crumbs = [[
             'title'        => MaterielTask::home($this->locale),
@@ -100,7 +97,7 @@ class Controller extends BaseController
 
         if ($blog) {
             $crumbs[] = [
-                'author' => $blog->author,
+                'author'       => $blog->author,
                 'title'        => $blog->title,
                 'absolute_url' => $blog->absoluteUrl(),
             ];
