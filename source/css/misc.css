@@ -1,0 +1,194 @@
+#wpstats {
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.wi-button {
+  display: table;
+  margin: 0 auto;
+  width: 50%;
+}
+.wi-button .wi-btn {
+  text-align: center;
+}
+
+/* SVG comments
+=================================================================================*/
+.fox56__css__icon__comment {
+  width: 16px;
+}
+
+/* MISC
+=================================================================================*/
+.single-fox_block .site-content {
+  min-height: 100vh;
+}
+
+.demonstration {
+  display: block;
+  background: #000;
+  color: #fc0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 10px;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+.demonstration p {
+  margin: 0;
+}
+
+.fox-library-modal-btn {
+  margin-left: 5px;
+  background: #000;
+  color: white;
+  vertical-align: top;
+}
+
+.fox-library-modal-btn:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/foxhead.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.elementor-add-new-section .elementor-add-section-area-button.fox-library-modal-btn {
+  width: auto;
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  background: #006ba1;
+  color: white;
+  border-radius: 0;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* TEMPLATE BUILDER PROBLEM
+---------------------------------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 600px) {
+  .archive-builder .container,
+  .single-builder .container {
+    max-width: 100%;
+  }
+}
+/* IMAGEBOX
+-------------------------------------------------------------------------------------- */
+.elementor-image-box-title {
+  margin-top: 0;
+}
+
+/**
+ *
+ */
+.widget56__edit {
+  position: absolute;
+  background: #2271b1;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  color: white;
+  z-index: 999;
+  line-height: 28px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0 8px;
+  cursor: pointer;
+  top: 0px;
+  left: 90%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.widget56__edit:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.widget56__edit i {
+  margin-left: 1px;
+  font-size: 14px;
+  display: inline-block;
+  line-height: inherit;
+}
+
+.widget56:hover > .widget56__edit {
+  opacity: 1;
+  visibility: visible;
+}
+
+[data-widget=section] > .widget56__edit {
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+[data-widget=row] > .widget56__edit {
+  top: -20px;
+  left: 10px;
+  transform: none;
+}
+
+[data-widget=column] > .widget56__edit {
+  top: 10px;
+  left: 20px;
+  transform: none;
+}
+
+.customize-partial-edit-shortcuts-shown .focused {
+  outline: 1px solid #2271b1;
+  box-shadow: 2px 3px 10px #2271b1;
+}
+.customize-partial-edit-shortcuts-shown .widget56__edit {
+  display: block;
+}
+.customize-partial-edit-shortcuts-shown .widget56 {
+  position: relative;
+  overflow: visible;
+  min-height: 20px;
+}
+.customize-partial-edit-shortcuts-shown .widget56.heading56 {
+  overflow: hidden;
+}
+.customize-partial-edit-shortcuts-shown .widget56:hover {
+  outline: 1px solid #2271b1;
+  box-shadow: 2px 3px 10px #2271b1;
+}
+.customize-partial-edit-shortcuts-shown .widget56 .customize-partial-edit-shortcut {
+  display: none !important;
+}
+.customize-partial-edit-shortcuts-shown .section56,
+.customize-partial-edit-shortcuts-shown .row56 {
+  min-height: 20px;
+}
+
+/* MOBILE STRETCH
+-------------------------------------------------------------------------------------- */
+.mobile-stretch .blog56--grid--mobile--1cols .thumbnail56 {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.mobile-stretch .blog56--group {
+  overflow: visible;
+}/*# sourceMappingURL=misc.css.map */

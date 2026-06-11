@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("XVideoChannelViewStoryAsyncControllerRouteBuilder",["jsRouteBuilder"],(function(t,n,r,o,a,i,l){var e=r("jsRouteBuilder")("/video/channel/view/story/async/{root_video_id}/",Object.freeze({video_ids:[],use_video_placeholder:!1,setup_interactions:!1,is_first_story:!1,feed_tracking_data:[],caller:"channel_view_from_unknown",fetch_channel_pivots:!1}),void 0),s=e;l.default=s}),98);
