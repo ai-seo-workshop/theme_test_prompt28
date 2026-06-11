@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: http://test_prompt28.com/sitemap.xml
