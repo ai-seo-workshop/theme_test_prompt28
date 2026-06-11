@@ -137,33 +137,33 @@ class Blog extends Model
         return $faqData;
     }
 
-//    public function getContentAttribute() {
-//        $value = $this->attributes['content'] ?? '';
-//
-//        if ($value) {
-//            if (Str::contains($value, 'nanjing')) {
-//                return str_replace('https://cc-1251174242.cos.ap-nanjing.myqcloud.com', '/image', $value);
-//            } elseif (Str::contains($value, 'hongkong')) {
-//                return str_replace('https://global-ec-1251174242.cos.ap-hongkong.myqcloud.com', '/img', $value);
-//            }
-//
-//        }
-//
-//        return $value;
-//    }
-//
-//    public function getHeadImgAttribute() {
-//        $value = $this->attributes['head_img'] ?? null;
-//
-//        if ($value) {
-//            if (Str::contains($value, 'nanjing')) {
-//                return str_replace('https://cc-1251174242.cos.ap-nanjing.myqcloud.com', '/image', $value);
-//            } elseif (Str::contains($value, 'hongkong')) {
-//                return str_replace('https://global-ec-1251174242.cos.ap-hongkong.myqcloud.com', '/img', $value);
-//            }
-//        }
-//
-//        return $value;
-//    }
+    public function getContentAttribute() {
+        $value = $this->attributes['content'] ?? '';
+
+        if ($value) {
+            if (Str::contains($value, 'nanjing')) {
+                return str_replace('https://cc-1251174242.cos.ap-nanjing.myqcloud.com', '/image', $value);
+            } elseif (Str::contains($value, 'hongkong')) {
+                return str_replace('https://global-ec-1251174242.cos.ap-hongkong.myqcloud.com', '/img', $value);
+            }
+
+        }
+
+        return $value;
+    }
+
+    public function getHeadImgAttribute() {
+        $value = $this->attributes['head_img'] ?? null;
+
+        if ($value) {
+            if (Str::contains($value, 'nanjing')) {
+                return str_replace('https://cc-1251174242.cos.ap-nanjing.myqcloud.com', '/image', $value);
+            } elseif (Str::contains($value, 'hongkong')) {
+                return str_replace('https://global-ec-1251174242.cos.ap-hongkong.myqcloud.com', '/img', $value);
+            }
+        }
+
+        return $value;
+    }
 
 }
